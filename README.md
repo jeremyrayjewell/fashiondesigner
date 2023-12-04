@@ -1,2 +1,2 @@
 # fashiondesigner
- Site for small fashion brand
+Site for a small fashion brand

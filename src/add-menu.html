@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Agregar</title>
+</head>
+<body>
+    <h3>Agregar al menú</h3>
+    <hr>
+        <div class="add-container">
+
+            <label for="name-field">Nombre del producto (máximo 30 caracteres):</label>
+            <input type="text" id="name-field" placeholder="Nombre" maxlength="30">
+            <br>
+            <label for="price-field">Precio del producto en guaraníes (₲):</label>
+            <input type="number" id="price-field" placeholder="Precio" min="0" max="1000000000">
+            <br>
+            <label for="desc-field">Breve descripción (máximo 90 caracteres):</label>
+            <textarea id="desc-field" placeholder="Breve descripción" maxlength="90"></textarea>
+            <br>
+            <label for="longdesc-field">Descripción larga (máximo 375 caracteres):</label>
+            <textarea id="longdesc-field" placeholder="Descripción larga" maxlength="375"></textarea>
+            <br>
+            <label for="prefix-field">El prefijo que forma la base de los archivos de imagen del producto (máximo 13 caracteres):</label>
+            <input type="text" id="prefix-field" placeholder="Prefijo de archivo" maxlength="13">                
+            <ul style="font-size: smaller; margin-top: 0; list-style: square;">
+               <li>imagen principal:  
+                <ul style="font-style: italic; list-style: none;"><li>ejemplo.png</li></ul></li>
+               </li>
+                <li>imágenes secundarias: 
+                    <ul style="font-style: italic; list-style: none;"><li>ejemplo1.png</li><li>ejemplo2.png</li><li>ejemplo3.png</li></ul></li>
+            </ul>
+            <br>
+            <br>
+            <label for="add-button">Confirme todos los detalles antes de enviar.</label>
+            <button id="add-button">Agregar a la lista del menú</button>
+            <br>
+            <hr>
+            <div class="menu-container">
+                <ul id="items-list"></ul>
+        </div>
+    </div>
+
+    <script src="add-menu.js" type="module"></script>
+
+
+      <div id="myModal" class="edit-item-modal">
+        <div class="modal-content">
+          <span class="close" style="cursor: pointer;">&times;</span>
+          <p>Editar</p>
+          <div class="modal-content">
+            <label for="edit-name-field">Nombre del producto (máximo 30 caracteres):</label>
+            <input type="text" id="edit-name-field" placeholder="Nombre" maxlength="30">
+            <br>
+            <label for="edit-price-field">Precio del producto en guaraníes (₲):</label>
+            <input type="number" id="edit-price-field" placeholder="Precio" min="0" max="1000000000">
+            <br>
+            <label for="edit-desc-field">Breve descripción (máximo 90 caracteres):</label><br>
+            <textarea id="edit-desc-field" placeholder="Breve descripción" maxlength="90"></textarea>
+            <br>
+            <label for="edit-longdesc-field">Descripción larga (máximo 375 caracteres):</label><br>
+            <textarea id="edit-longdesc-field" placeholder="Descripción larga" maxlength="375"></textarea>
+            <br>
+            <label for="edit-img-field">Editar nombres/rutas de archivos de imagen (máximo 18 caracteres):</label>
+            <input type="text" id="edit-img-field" placeholder="Prefijo de archivo" maxlength="18">
+            <input type="text" id="edit-gal1-field" placeholder="Prefijo de archivo" maxlength="18">
+            <input type="text" id="edit-gal2-field" placeholder="Prefijo de archivo" maxlength="18">
+            <input type="text" id="edit-gal3-field" placeholder="Prefijo de archivo" maxlength="18">
+            <br><hr>
+            <button id="save-button">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+      
+
+</body>
+</html>

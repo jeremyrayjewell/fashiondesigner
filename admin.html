@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Sabor Caribe Administración</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Calistoga&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="src/admin.css">
+    </head>
+
+    <body>
+        <section id="logged-out-view">
+            <div class="container">
+                <img class="logo" src="images/logo.png" alt="">
+                <h1 class="app-title">Sabor Caribe Administración</h1>
+                <div class="auth-fields-and-buttons">
+                    <input id="email-input" type="email" placeholder="Correo electrónico">
+                    <input id="password-input" type="password" placeholder="Contraseña">
+                    
+                    <button id="sign-in-btn" class="primary-btn">Iniciar sesión</button>
+                    <p id="login-notification"></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="logged-in-view">
+            <div class="container">
+                <nav>
+                    <button id="sign-out-btn" class="icon-btn">
+                        <img src="images/logout.svg" alt="Desconectar">
+                        <span>Desconectar</span>
+                    </button>
+                </nav>
+                <h1 class="app-title">Sabor Caribe Administración</h1>
+                <img class="logo" src="images/logo.png">
+                <p id="app-welcome"></p>
+                <button id="return-btn" class="return-btn">
+                    <span>Inicio</span>
+                </button>
+                <div id="admin-function-btns">
+                    <button id="menu-update-btn" class="secondary-btn">Actualizar el menú</button>
+                    <button id="menu-add-btn" class="secondary-btn">Agregar al menú</button>
+                    <button id="inventory-btn" class="secondary-btn">Inventario</button>
+                    <button id="finances-btn" class="secondary-btn">Finanzas</button>
+                    <button id="orders-btn" class="primary-btn">Pedidos</button>
+                </div>
+            </div>
+        </section>
+        <section id="update-menu-view">
+            <iframe id="update-menu-iframe" src="src/update-menu.html"></iframe>
+        </section>
+        <section id="add-menu-view">
+            <!-- <embed type="text/html" src="src/add-menu.html" width="100vw" height="100v"> -->
+            <iframe id="add-menu-iframe" src="src/add-menu.html"></iframe>
+        </section>
+        </section>
+        <section id="inventory-view">
+            <iframe id="inventory-iframe" src="src/inventory.html"></iframe>
+        </section>
+        <section id="finances-view">
+            <iframe id="finances-iframe" src="src/finances.html"></iframe>
+        </section>
+        <section id="orders-view">
+            <iframe id="orders-iframe" src="src/orders.html"></iframe>
+        </section>
+        <script src="src/admin.js" type="module"></script>
+    </body>
+
+</html>
